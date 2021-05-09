@@ -1,0 +1,54 @@
+{
+    "name": "@ermish/parcel-plugin-shuji",
+    "version": "1.0.0",
+    "author": "ermish <philipermish@gmail.com>",
+    "license": "MIT",
+    "description": "Parcel plugin for the Shuji markdown to React JSX converter",
+    "keywords": [
+        "parcel",
+        "plugin",
+        "react",
+        "markdown",
+        "template",
+        "remark",
+        "jsx",
+        "front matter",
+        "converter"
+      ],
+    "repository": "https://github.com/Ermish/parcel-plugin-shuji",
+    "main": "dist/index.js",
+    "collaborators": [
+        "ermish <philipermish@gmail.com>"
+    ],
+    "files":  [
+        "dist/",
+        "package.json",
+        "license",
+        "README.md"
+    ],
+    "engines": {
+        "parcel": "2.x"
+    },
+    "scripts": {
+        "build": "yarn && parcel build ./src/index.ts --dist-dir dist",
+        "start": "yarn && parcel watch ./src/index.ts --dist-dir dist",
+        "lint": "eslint ./src/**.js",
+        "test": "jest --verbose"
+    },
+    "dependencies": {
+        "@ermish/shuji": "1.0.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.14.0",
+        "@babel/preset-env": "^7.12.11",
+        "@babel/preset-react": "^7.13.13",
+        "@babel/preset-typescript": "^7.13.0",
+        "@tsconfig/node16": "^1.0.0",
+        "@types/jest": "^26.0.20",
+        "eslint": "7.17.0",
+        "eslint-config-prettier": "^7.1.0",
+        "jest": "^26.6.3",
+        "parcel": "2.0.0-beta.1",
+        "typescript": "4.2.4"
+    }
+}
