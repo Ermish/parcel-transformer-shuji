@@ -17,5 +17,6 @@ You can configure several options by adding a `shuji.config.json` or `.shujirc.j
 See options [here](https://github.com/Ermish/shuji#config-options)
 
 
+## What is Shuji?
 
 Check out [Shuji](https://github.com/Ermish/shuji) for more details!
