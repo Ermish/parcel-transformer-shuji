@@ -986,10 +986,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@ermish/shuji@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@ermish/shuji/-/shuji-1.0.2.tgz#5929fc266e4ea185c286e704bb575a4515673b6a"
-  integrity sha512-cACb8a0dMg08ML7pFhfRGJSVKZIj6BP8/8K5vdsbITtTcIAd7FMZeq1O3FG3QfwGJ5ASfGgVoajsxdMo2nxDXQ==
+"@ermish/shuji@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@ermish/shuji/-/shuji-1.1.1.tgz#9196301c5a7112e44a15f1bfb50ee231087bde40"
+  integrity sha512-npoug1Lj2GrbgCkujdq8fiWxIS7mG7bxmnnhzFxDqvtw/VM5RU3NfxXJATc33V+JgVV5jJXDtg9UgEYS8hWhlg==
   dependencies:
     fs-extra "10.0.0"
     json5 "^2.2.0"
@@ -2026,6 +2026,15 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/express-serve-static-core@*":
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.17.19.tgz#00acfc1632e729acac4f1530e9e16f6dd1508a1d"
+  integrity sha512-DJOSHzX7pCiSElWaGR8kCprwibCB/3yW6vcT8VG3P0SJjnv19gnWG/AZMfM60Xj/YJIp/YCaDHyvzsFVeniARA==
+  dependencies:
+    "@types/node" "*"
+    "@types/qs" "*"
+    "@types/range-parser" "*"
+
 "@types/graceful-fs@^4.1.2":
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/@types/graceful-fs/-/graceful-fs-4.1.5.tgz#21ffba0d98da4350db64891f92a9e5db3cdb4e15"
@@ -2084,6 +2093,13 @@
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
   integrity sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==
 
+"@types/parcel-bundler@1.12.3":
+  version "1.12.3"
+  resolved "https://registry.yarnpkg.com/@types/parcel-bundler/-/parcel-bundler-1.12.3.tgz#29512506ac6db43351e8dc8c019d30342088cecc"
+  integrity sha512-ogGPp2RMVgNBGl/swDtKS954VG2SbWJfSL22sgNg42QH8dTS6uvQHPquodkHjl8nvPuq0FC71bGIl/MKIwEkaw==
+  dependencies:
+    "@types/express-serve-static-core" "*"
+
 "@types/prettier@^2.0.0":
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.2.3.tgz#ef65165aea2924c9359205bf748865b8881753c0"
@@ -2093,6 +2109,16 @@
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
+
+"@types/qs@*":
+  version "6.9.6"
+  resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.6.tgz#df9c3c8b31a247ec315e6996566be3171df4b3b1"
+  integrity sha512-0/HnwIfW4ki2D8L8c9GVcG5I72s9jP5GSLVF0VIXDW00kmIpA6O33G7a8n59Tmh7Nz0WUC3rSb7PTY/sdW2JzA==
+
+"@types/range-parser@*":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.3.tgz#7ee330ba7caafb98090bece86a5ee44115904c2c"
+  integrity sha512-ewFXqrQHlFsgc09MK5jP5iR7vumV/BYayNC6PgJO2LPe8vrnNFyjQjSppfEngITi0qvfKtzFvgKymGheFM9UOA==
 
 "@types/stack-utils@^2.0.0":
   version "2.0.0"

@@ -1,9 +1,9 @@
 {
-    "name": "@ermish/parcel-plugin-shuji",
+    "name": "@ermish/parcel-transformer-shuji",
     "version": "1.0.0",
     "author": "ermish <philipermish@gmail.com>",
     "license": "MIT",
-    "description": "Parcel plugin for the Shuji markdown to React JSX converter",
+    "description": "Parcel transformer plugin for the Shuji markdown to React JSX converter",
     "keywords": [
         "parcel",
         "plugin",
@@ -15,7 +15,7 @@
         "front matter",
         "converter"
       ],
-    "repository": "https://github.com/Ermish/parcel-plugin-shuji",
+    "repository": "https://github.com/Ermish/parcel-transformer-shuji",
     "main": "dist/index.js",
     "collaborators": [
         "ermish <philipermish@gmail.com>"
@@ -36,7 +36,7 @@
         "test": "jest --verbose"
     },
     "dependencies": {
-        "@ermish/shuji": "1.0.2"
+        "@ermish/shuji": "1.1.1"
     },
     "devDependencies": {
         "@babel/core": "^7.14.0",
@@ -45,6 +45,7 @@
         "@babel/preset-typescript": "^7.13.0",
         "@tsconfig/node16": "^1.0.0",
         "@types/jest": "^26.0.20",
+        "@types/parcel-bundler": "1.12.3",
         "eslint": "7.17.0",
         "eslint-config-prettier": "^7.1.0",
         "jest": "^26.6.3",
