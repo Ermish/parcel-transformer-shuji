@@ -1,4 +1,7 @@
 # parcel-plugin-shuji
+
+STILL IN ACTIVE DEVELOPMENT!
+
 Parcel plugin for the [Shuji](https://github.com/Ermish/shuji) markdown to react jsx converter
 
 ## Install the parcel plugin
