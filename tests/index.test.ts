@@ -1,6 +1,7 @@
 import Parcel from "@parcel/core"
 import { existsSync } from 'fs'
 import { promises } from 'fs'
+import path from 'path'
 
 
 const defaultOptions = {
@@ -14,7 +15,8 @@ const defaultOptions = {
 describe('test parcel plugin', () => {
     test('works with default options', async () => {
         const parcelInstance = new Parcel({
-            mode: "production"
+            mode: "production",
+            entries: path.join(__dirname, "markdown/**")
         })
         await parcelInstance.run()
 
@@ -32,4 +34,3 @@ const cleanup = async (folderPath:string) => {
     //Cleanup test files/folders
     await promises.rmdir(`${folderPath}`,{ recursive:true } )
 }
-``

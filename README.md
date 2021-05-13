@@ -12,13 +12,29 @@ or
 npm install --dev parcel-plugin-shuji
 ```
 
-Parcel will automatically look for `.md` files in the `./markdown` folder and compile them into the `./jsxMarkdown` folder.
+Create a `.parcelrc` file or update your existing one to integrate the `shuji` transformer plugin:
+
+```json
+{
+  "extends": ["@parcel/config-default"],
+  "transformers": {
+    "*.md": ["parcel-transformer-shuji"]
+  }
+}
+```
+
+- Using `"extends": ["@parcel/config-default"],` will make sure everything else will run normally.
+You can scope what files/folder shuji runs by changing the `"*.md"` portion.
+- Parcel will automatically look for `.md` files in the default `./markdown` folder and compile them into the `./jsxMarkdown` folder.
+
+&nbsp;
 
 ## Config options
 
 You can configure several options by adding a `shuji.config.json` or `.shujirc.json` file in your **root directory** and parcel will automatically load it.
 See options [here](https://github.com/Ermish/shuji#config-options)
 
+&nbsp;
 
 ## What is Shuji?
 

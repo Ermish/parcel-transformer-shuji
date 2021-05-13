@@ -16,7 +16,6 @@
         "converter"
     ],
     "repository": "https://github.com/Ermish/parcel-transformer-shuji",
-    "main": "dist/index.js",
     "collaborators": [
         "ermish <philipermish@gmail.com>"
     ],
@@ -27,28 +26,32 @@
         "README.md"
     ],
     "engines": {
-        "parcel": "2.x"
+        "parcel": "^2.0.0-beta.2"
     },
+    "main": "dist/index.js",
     "scripts": {
-        "build": "yarn && parcel build ./src/index.ts --dist-dir dist --log-level 3",
-        "start": "yarn && parcel watch ./src/index.ts --dist-dir dist",
+        "build": "yarn && parcel build ./src/index.ts",
         "lint": "eslint ./src/**.js",
-        "test": "jest --verbose"
+        "test": "yarn build && cd tests && yarn test"
     },
     "dependencies": {
-        "@ermish/shuji": "1.1.1"
+        "@ermish/shuji": "1.1.2",
+        "@parcel/plugin": "^2.0.0-alpha.3"
     },
     "devDependencies": {
         "@babel/core": "^7.14.0",
-        "@babel/preset-env": "^7.12.11",
+        "@babel/plugin-transform-runtime": "^7.13.15",
+        "@babel/preset-env": "^7.14.1",
         "@babel/preset-react": "^7.13.13",
         "@babel/preset-typescript": "^7.13.0",
-        "@tsconfig/node16": "^1.0.0",
-        "@types/jest": "^26.0.20",
-        "eslint": "7.17.0",
-        "eslint-config-prettier": "^7.1.0",
+        "@parcel/types": "^2.0.0-alpha.3",
+        "@tsconfig/node16": "^1.0.1",
+        "@types/jest": "^26.0.23",
+        "eslint": "7.26.0",
+        "eslint-config-prettier": "^8.3.0",
         "jest": "^26.6.3",
-        "parcel": "2.0.0-beta.1",
+        "parcel": "2.0.0-beta.2",
         "typescript": "4.2.4"
-    }
+    },
+    "resolutions": {}
 }
