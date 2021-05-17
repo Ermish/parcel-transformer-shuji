@@ -14,19 +14,41 @@ export default (new Transformer({
   //   return ast
   // },
 
+  async canReuseAST({ ast, options, logger }) {
+    return false
+  },
+
   async transform({ asset, config, logger, resolve, options }) {
- 
+
       try {
+
+          logger.verbose({ message: `Shuji: options= ${JSON.stringify(options)}`})
+        //   logger.verbose({ message: `Shuji: options.env= ${JSON.stringify(options.env)}`})
+
+          logger.verbose({ message: `Shuji: before calling get code.`})
+
+
           const code = await asset.getCode()
+
+          logger.verbose({ message: `Shuji: get code works!`})
+
           const newComponentName = basename(asset.filePath, '.md')
+
+          logger.verbose({ message: `Shuji: get component name works!`})
 
           logger.verbose({ message: 'Shuji: Converting markdown to jsx...'})
 
           const transformedString = await transformMarkdownString(code, newComponentName)
 
-          logger.verbose({ message: `Shuji: creating ${newComponentName} component...`})
+          logger.verbose({ message: `Shuji: creating "${newComponentName}" component...`})
 
           //asset.setCode(transformedString)
+          asset.setMap(null)
+
+          //disable source maps. No need since optimizations would happen at a later step.
+          options.env['sourceMap'] = false
+
+          logger.verbose({ message: `Shuji: options.sourcemap= ${JSON.stringify(options.env.sourceMap)}`})
 
         return [
             {
@@ -34,8 +56,14 @@ export default (new Transformer({
                 content: transformedString,
                 uniqueKey: newComponentName,
                 filePath: 'jsxFiles',
-                sourcemap: false,
-                ...asset
+                isSource: false,
+                isIsolated: true,
+                isInline: true,
+                isEntry: true,
+                sideEffects: false,
+                sourceMap: false,
+                sourceMaps: false,
+                map: false
             }
         ]
         } catch (err) {

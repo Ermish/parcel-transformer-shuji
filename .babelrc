@@ -5,6 +5,10 @@
         "@babel/preset-typescript"
     ],
     "plugins": [
+        "@babel/plugin-transform-react-jsx",
         "@babel/plugin-transform-runtime"
-    ]
+    ],
+    "parserOpts": {
+        "plugins": ["jsx", "typescript"]
+    }
 }

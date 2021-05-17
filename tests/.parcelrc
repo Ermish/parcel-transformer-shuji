@@ -1,6 +1,6 @@
 {
     "extends": "@parcel/config-default",
     "transformers": {
-        "*.md": [ "...", "@ermish/parcel-transformer-shuji"]
+        "*.{md, js}": ["@ermish/parcel-transformer-shuji"]
     }
 }
